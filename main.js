@@ -9,7 +9,7 @@ var booleanGuessedMatch = false;
 
 
 function initializer(){
-    $('.start-button').click(gameSetUp());
+    $('.start-button').click(gameSetUp);
     $('#videoBackground').playbackRate = 0.5;
     $('.card').click(cardFlips);
 };
@@ -21,7 +21,7 @@ function gameSetUp(){
     $('.videoOverlay').removeClass('hide');
     $('.header-container').removeClass('hide');
     $('.stats-container').removeClass('hide');
-    $('#game-area hide').removeClass('hide');
+    $('#game-area').removeClass('hide');
     $('.villan-container').removeClass('hide')
     $('.health-bar').removeClass('hide')
 }
