@@ -7,8 +7,17 @@ var secondFlipped = null;
 var currentHealth = 100;
 var booleanGuessedMatch = false;
 
+// var soundOption = null;
+
 
 function initializer(){
+    // var soundOption = confirm('Would you like to run the game with audio?');
+    // console.log(soundOption)
+    // if (soundOption){
+    //     var initialAudio = new Audio('media/startPageMusic.mp3');
+    //     initialAudio.play();
+    // }
+
     $('.start-button').click(gameSetUp);
     $('#videoBackground').playbackRate = 0.5;
     $('.card').click(cardFlips);
@@ -16,6 +25,7 @@ function initializer(){
 
 function gameSetUp(){
     $('.start-screen').addClass('hide');
+    setTimeout(function(){addStartVideo}, 10000);
 
     $('.picOverVideo').removeClass('hide');
     $('.videoOverlay').removeClass('hide');
@@ -26,6 +36,10 @@ function gameSetUp(){
     $('#game-area').removeClass('hide');
     $('.villan-container').removeClass('hide')
     $('.health-bar').removeClass('hide')
+
+    var gameAudio = new Audio('media/audio/gameAudio.mp3');
+    gameAudio.play();
+    gameAudio.loop = true;
 }
 
 function cardFlips(event){
@@ -83,6 +97,14 @@ function healthModifier(){
     }
 }
 
+function addStartVideo(){
+    var videoIntro = $('<video>', {
+        id: 'video',
+        src: 'media/video/lordZeddIntroVid.mov',
+        type: 'video/mp4',
+    });
+    $('#zeddStartVideoContainer').append(videoIntro);
+}
 
 // $(event.currentTarget).addClass('hide');
 
