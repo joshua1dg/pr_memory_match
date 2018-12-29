@@ -1,4 +1,4 @@
-$(document).ready(initializeGame);
+$(document).ready(initializer);
 
 
 var firstFlipped = null;
@@ -8,10 +8,23 @@ var currentHealth = 100;
 var booleanGuessedMatch = false;
 
 
-function initializeGame(){
+function initializer(){
+    $('.start-button').click(gameSetUp());
     $('#videoBackground').playbackRate = 0.5;
     $('.card').click(cardFlips);
 };
+
+function gameSetUp(){
+    $('.start-screen').remove();
+
+    $('.picOverVideo').removeClass('hide');
+    $('.videoOverlay').removeClass('hide');
+    $('.header-container').removeClass('hide');
+    $('.stats-container').removeClass('hide');
+    $('#game-area hide').removeClass('hide');
+    $('.villan-container').removeClass('hide')
+    $('.health-bar').removeClass('hide')
+}
 
 function cardFlips(event){
     console.log(event);

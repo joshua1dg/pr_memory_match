@@ -9,20 +9,25 @@
 
 <body>
 
-    <div class="picOverVideo"></div>
+    <!--<div class="start-screen">-->
+        <!--<div class="start-background"></div>-->
+        <!--<button class="start-button">Start</button>-->
+    <!--</div>-->
 
-    <div class="videoOverlay">
+    <div class="picOverVideo hide"></div>
+
+    <div class="videoOverlay hide">
         <video autoplay muted loop id="videoBackground">
             <source src="media/videoBackground.mp4" type="video/mp4">
         </video>
     </div>
 
-    <div class="header-container">
+    <div class="header-container hide">
         <img src="media/logo.png" alt="Power Rangers Logo">
         <div class="about-game"><a href="">About The Game</a></div>
     </div>
 
-    <div class="stats-container">
+    <div class="stats-container hide">
         <div class="stats-wrapper-container">
             <div class="games-played">
                 <div class="label">Games Played</div>
@@ -50,7 +55,7 @@
 
 
 
-    <div id="game-area">
+    <div id="game-area hide">
 
         <div class="card">
             <div class="front" style="background-image: url('media/cardImages/blackRanger.jpg');"></div>
@@ -135,12 +140,12 @@
 
         <div class="health-bar-container">
             <!--<div class="health-icon"><img src="media/lifeBarIcon.png"" alt=""></div>-->
-            <progress class="health-bar" value="80"></progress>
+            <progress class="health-bar hide" value="80"></progress>
         </div>
 
     </div>
 
-    <div class="villan-container"></div>
+    <div class="villan-container hide"></div>
 
 
 
