@@ -15,12 +15,14 @@ function initializer(){
 };
 
 function gameSetUp(){
-    $('.start-screen').remove();
+    $('.start-screen').addClass('hide');
 
     $('.picOverVideo').removeClass('hide');
     $('.videoOverlay').removeClass('hide');
     $('.header-container').removeClass('hide');
     $('.stats-container').removeClass('hide');
+
+    //giving game-area the class of hide does not work, must be in ID????
     $('#game-area').removeClass('hide');
     $('.villan-container').removeClass('hide')
     $('.health-bar').removeClass('hide')
