@@ -1,0 +1,210 @@
+body{
+    height: 100vh;
+    background-color: black;
+    margin: 0;
+    font-size: 0;
+}
+
+body > *{
+    font-size: initial;
+}
+
+.start-screen{
+    position: relative;
+    height: 100%;
+}
+
+.start-background{
+    background-image: url("media/startWallpaper.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.start-button{
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    /*padding: 5%;*/
+    font-size: 300%;
+}
+
+/*_____________________________________header____________________________________*/
+.header-container{
+    height: 15%;
+    /*background-color: red;*/
+    text-align: center;
+    position: relative;
+}
+
+.header-container > img{
+    height: 95%;
+}
+
+.about-game{
+    position: absolute;
+    bottom: 10%;
+    left: 1.5%;
+}
+
+
+
+/*__________________________________Stats Left Panel__________________________*/
+
+.stats-container{
+    display: inline-block;
+    height: 85%;
+    width: 15%;
+    /*background-color: #2b542c;*/
+    vertical-align: top;
+
+
+}
+
+.stats-wrapper-container{
+    position: relative;
+    text-align: center;
+    box-shadow: inset 0px 0px 0px 8px lightgray;
+    border-radius: 25px;
+    background-color: lightslategray;
+    height: 95%;
+    top: 2.5%;
+}
+
+.games-played{
+    /*background-color: #8c8c8c;*/
+    height: 25%;
+}
+
+.label{
+    position: relative;
+    top: 20%;
+}
+
+.attempts{
+    height: 25%;
+    /*background-color: #c0a16b;*/
+}
+
+.accuracy{
+    height: 25%;
+}
+
+.reset-game-button-container{
+    position: relative;
+    height: 25%;
+    /*background-color: #843534;*/
+}
+
+.reset{
+    position: absolute;
+    bottom: 15%;
+    transform: translate(-50%, -50%);
+    /*explain translate? don't know why its working*/
+}
+
+
+/*________________________________Villan Right Panel_________________________________*/
+.villan-container{
+    display: inline-block;
+    background-image: url("media/lordZedd.png");
+    height: 85%;
+    width: 15%;
+    background-size: cover;
+    background-position: center;
+    vertical-align: top;
+}
+
+.picOverVideo{
+    position: absolute;
+    background-image: url("media/lordZeddBackground.png");
+    height: 75%;
+    width: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 13%;
+}
+
+
+/*_________________________________Game Container____________________________________*/
+
+.hide{
+    display: none;
+}
+
+#game-area{
+    display: inline-block;
+    height: 85%;
+    width: 70%;
+    /*centers all child elements within game-area*/
+    margin: 0 auto;
+    font-size: 0;
+    vertical-align: top;
+
+
+
+    /*display: flex;*/
+    /*flex-wrap: wrap;*/
+    /*align-content: center;*/
+}
+
+.card{
+    display: inline-block;
+    height: 28.5%;
+    /*background-color: yellow;*/
+    width: 16.667%;
+    position: relative;
+}
+
+
+.back{
+    background-image: url("media/cardImages/cardBack.png");
+}
+
+.front, .back{
+    height: 90%;
+    width: 75%;
+    background-size: contain;
+    position: absolute;
+    left: 12.5%;
+    top: 5%;
+    background-repeat: no-repeat;
+}
+
+/*_________________________________Health Bar____________________________________*/
+
+.health-bar-container{
+    display: inline-block;
+    /*background-color: #5bc0de;*/
+    height: 14.5%;
+    width: 100%;
+    text-align: center;
+
+}
+
+/*STILL DONT KNOW HOW TO VERTICAL ALIGN STUFF*/
+.health-bar{
+    position: relative;
+    top: 40%;
+    width:95%;
+    height: 25%;
+    /*background-color: #2b542c;*/
+}
+
+.health-icon{
+    max-height: 5%;
+    width: auto;
+}
+
+#videoBackground {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 250%;
+    min-height: 100%;
+}
+
+.videoOverlay{
+    opacity: .5;
+}

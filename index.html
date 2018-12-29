@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script src="main.js"></script>
+</head>
+
+<body>
+
+    <div class="picOverVideo"></div>
+
+    <div class="videoOverlay">
+        <video autoplay muted loop id="videoBackground">
+            <source src="media/videoBackground.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="header-container">
+        <img src="media/logo.png" alt="Power Rangers Logo">
+        <div class="about-game"><a href="">About The Game</a></div>
+    </div>
+
+    <div class="stats-container">
+        <div class="stats-wrapper-container">
+            <div class="games-played">
+                <div class="label">Games Played</div>
+                <div class="value"></div>
+            </div>
+
+            <div class="attempts">
+                <div class="label">Attempts</div>
+                <div class="value"></div>
+            </div>
+
+
+            <div class="accuracy">
+                <div class="label">Accuracy</div>
+                <div class="value"></div>
+            </div>
+
+            <div class="reset-game-button-container">
+                <button class="reset">Reset Game</button>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <div id="game-area">
+
+        <div class="card">
+            <div class="front" style="background-image: url('media/cardImages/blackRanger.jpg');"></div>
+            <div class="back"></div>
+        </div>
+        <div class="card">
+            <div class="front" style="background-image: url('media/cardImages/blackRanger.jpg');"></div>
+            <div class="back"></div>
+        </div>
+
+        <div class="card">
+            <div class="front" style="background-image: url('media/cardImages/blueRanger.jpg');"></div>
+            <div class="back"></div>
+        </div>
+        <div class="card">
+            <div class="front" style="background-image: url('media/cardImages/blueRanger.jpg');"></div>
+            <div class="back"></div>
+        </div>
+
+        <div class="card">
+            <div class="front" style="background-image: url('media/cardImages/dragonzord.jpg');"></div>
+            <div class="back"></div>
+        </div>
+        <div class="card">
+            <div class="front" style="background-image: url('media/cardImages/dragonzord.jpg');"></div>
+            <div class="back"></div>
+        </div>
+
+        <div class="card">
+            <div class="front" style="background-image: url('media/cardImages/greenRanger.jpg');"></div>
+            <div class="back"></div>
+        </div>
+        <div class="card">
+            <div class="front" style="background-image: url('media/cardImages/greenRanger.jpg');"></div>
+            <div class="back"></div>
+        </div>
+
+        <div class="card">
+            <div class="front" style="background-image: url('media/cardImages/megazord.jpg');"></div>
+            <div class="back"></div>
+        </div>
+        <div class="card">
+            <div class="front" style="background-image: url('media/cardImages/megazord.jpg');"></div>
+            <div class="back"></div>
+        </div>
+
+        <div class="card">
+            <div class="front" style="background-image: url('media/cardImages/pinkRanger.jpg');"></div>
+            <div class="back"></div>
+        </div>
+        <div class="card">
+            <div class="front" style="background-image: url('media/cardImages/pinkRanger.jpg');"></div>
+            <div class="back"></div>
+        </div>
+
+        <div class="card">
+            <div class="front" style="background-image: url('media/cardImages/redRanger.jpg');"></div>
+            <div class="back"></div>
+        </div>
+        <div class="card">
+            <div class="front" style="background-image: url('media/cardImages/redRanger.jpg');"></div>
+            <div class="back"></div>
+        </div>
+
+        <div class="card">
+            <div class="front" style="background-image: url('media/cardImages/whiteRanger.jpg');"></div>
+            <div class="back"></div>
+        </div>
+        <div class="card">
+            <div class="front" style="background-image: url('media/cardImages/whiteRanger.jpg');"></div>
+            <div class="back"></div>
+        </div>
+
+        <div class="card">
+            <div class="front" style="background-image: url('media/cardImages/yellowRanger.jpg');"></div>
+            <div class="back"></div>
+        </div>
+        <div class="card">
+            <div class="front" style="background-image: url('media/cardImages/yellowRanger.jpg');"></div>
+            <div class="back"></div>
+        </div>
+
+        <div class="health-bar-container">
+            <!--<div class="health-icon"><img src="media/lifeBarIcon.png"" alt=""></div>-->
+            <progress class="health-bar" value="80"></progress>
+        </div>
+
+    </div>
+
+    <div class="villan-container"></div>
+
+
+
+</body>
+</html>
