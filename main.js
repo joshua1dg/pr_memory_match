@@ -107,11 +107,13 @@ function cardComparison(card1, card2){
 function healthModifier(){
     if (!booleanGuessedMatch){
         currentHealth -= 20;
-        if (currentHealth == 80 || currentHealth == 80 || currentHealth == 40){
+        if (currentHealth == 80 || currentHealth == 40){
             selectedAudio('lordZeddLaugh');
         }
         if (currentHealth == 0){
-            console.log('YOU DIED - LORD ZEDD BEAT YO ASS')
+            console.log('YOU DIED - LORD ZEDD BEAT YO ASS');
+            selectedAudio('lordZeddLaugh');
+
         }
         console.log('current health: ', currentHealth)
     }

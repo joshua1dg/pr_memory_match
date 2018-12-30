@@ -32,7 +32,9 @@ body > *{
 /*_____________________________________header____________________________________*/
 .header-container{
     height: 15%;
-    /*background-color: red;*/
+    background-color: dimgrey;
+    border-radius: 25px;
+    opacity: .6;
     text-align: center;
     position: relative;
 }
@@ -43,9 +45,11 @@ body > *{
 
 .about-game{
     position: absolute;
-    bottom: 10%;
-    left: 1.5%;
+    top: 10%;
+    right: 1.5%;
 }
+
+
 
 
 
@@ -62,13 +66,17 @@ body > *{
 }
 
 .stats-wrapper-container{
-    position: relative;
-    text-align: center;
-    box-shadow: inset 0px 0px 0px 8px lightgray;
-    border-radius: 25px;
-    background-color: lightslategray;
-    height: 95%;
-    top: 2.5%;
+    background-image: url("media/serpentera.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    /*position: relative;*/
+    /*text-align: center;*/
+    /*box-shadow: inset 0px 0px 0px 8px lightgray;*/
+    /*border-radius: 25px;*/
+    /*background-color: lightslategray;*/
+    /*height: 95%;*/
+    /*top: 2.5%;*/
 }
 
 .games-played{
@@ -147,6 +155,8 @@ body > *{
     margin: 0 auto;
     font-size: 0;
     vertical-align: top;
+    background-color: yellow;
+    border-radius: 35px;
 
 
     /*display: flex;*/
