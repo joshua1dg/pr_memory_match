@@ -131,6 +131,7 @@ function afterInitialVideoSetup(){
 function gameResultDisplayer(gameResult){
     $(`#${gameResult}Video`).removeClass('hide');
     var resultVideo = $(`#${gameResult}Video`);
+    $(`#${gameResult}Video`)[0].load();
     var resultVideoPlay = resultVideo[0].play();
     resultVideo.volume = 0.1;
     beforeEndGameVideo(gameResult)
@@ -301,10 +302,9 @@ function gameReset(){
     afterInitialVideoSetup();
 }
 
-// $(event.currentTarget).addClass('hide');
 
 
-//video not restarting on new game
+
+
 //classes and IDs
-//multiple layers of audio when restarted more than twice
-//click handler is what messed it up, when moved to front it stopped being called multiple times, does that mean all click handlers should be in init?
+//rounded corners
