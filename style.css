@@ -1,0 +1,279 @@
+body{
+    height: 100vh;
+    background-color: black;
+    margin: 0;
+    font-size: 0;
+}
+
+body > *{
+    font-size: initial;
+}
+
+.start-screen{
+    position: relative;
+    height: 100%;
+}
+
+.start-background{
+    background-image: url("media/startWallpaper.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.start-button{
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    /*padding: 5%;*/
+    font-size: 300%;
+}
+
+/*_____________________________________header____________________________________*/
+.header-container{
+    height: 15%;
+    background-color: dimgrey;
+    border-radius: 25px;
+    opacity: .6;
+    text-align: center;
+    position: relative;
+}
+
+.header-container > img{
+    height: 95%;
+}
+
+.about-game{
+    position: absolute;
+    top: 40%;
+    left: 1.5%;
+}
+
+.reset-game-button-container{
+    position: absolute;
+    top: 50%;
+    right: 1.5%;
+    height: 25%;
+    width: 10%;
+}
+
+.reset{
+    font-size: 80%;
+    width: 100%;
+}
+
+
+
+/*__________________________________Stats Left Panel__________________________*/
+
+.left-column-container{
+    display: inline-block;
+    height: 85%;
+    width: 15%;
+    vertical-align: top;
+
+}
+
+.left-serpentera-wrapper{
+    background-image: url("media/serpentera.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+
+
+/*________________________________Villan Right Panel_________________________________*/
+.villan-container{
+    display: inline-block;
+    background-image: url("media/lordZedd.png");
+    height: 85%;
+    width: 15%;
+    background-size: cover;
+    background-position: center;
+    vertical-align: top;
+}
+
+.picOverVideo{
+    position: absolute;
+    background-image: url("media/lordZeddBackground.png");
+    height: 55%;
+    width: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    right: .5%;
+    top: 21%;
+}
+
+
+/*_________________________________Game Container____________________________________*/
+
+.game-area{
+    display: inline-block;
+    height: 85%;
+    width: 70%;
+    /*centers all child elements within game-area*/
+    margin: 0 auto;
+    font-size: 0;
+    vertical-align: top;
+    background-color: gray;
+    border-radius: 35px;
+
+
+
+    /*display: flex;*/
+    /*flex-wrap: wrap;*/
+    /*align-content: center;*/
+}
+
+.cardsContainer{
+    height: 80%;
+    width: 95%;
+    margin: auto;
+    position: relative;
+    top: 5%;
+}
+
+.card{
+    /*transform: rotateY(180deg);*/
+    /*transition: 6s;*/
+    /*transform-style: preserve-3d;*/
+
+    display: inline-block;
+    height: 28.5%;
+    width: 16.667%;
+    position: relative;
+}
+
+/*.card:hover .back {*/
+    /*transform: rotateY(180deg);*/
+/*}*/
+
+.back{
+    background-image: url("media/cardImages/cardBack.png");
+}
+
+.front, .back{
+
+    border-radius: 10%;
+    height: 90%;
+    width: 75%;
+    background-size: contain;
+    position: absolute;
+    left: 12.5%;
+    top: 5%;
+    background-repeat: no-repeat;
+}
+
+/*_________________________________Health Bar____________________________________*/
+
+.stats-container{
+    display: inline-block;
+    height: 14.5%;
+    width: 100%;
+    text-align: center;
+
+}
+
+
+.current-health{
+    display: inline-block;
+    width: 25%;
+
+    height: 25%;
+}
+
+.label{
+    position: relative;
+    top: 20%;
+    font-size: 20px;
+}
+
+.value{
+    position: relative;
+    top: 50%;
+    font-size: 100%;
+    font-size: 35px;
+}
+
+.attempts{
+    display: inline-block;
+    width: 25%;
+
+    height: 25%;
+}
+
+.accuracy{
+    display: inline-block;
+    width: 25%;
+
+    height: 25%;
+}
+
+/*.games-played{*/
+    /*position: absolute;*/
+    /*bottom: 5%;*/
+    /*width: 25%;*/
+    /*height: 25%;*/
+    /*left: 25%;*/
+/*}*/
+
+.health-bar{
+    position: relative;
+    top: 40%;
+    width:95%;
+    height: 25%;
+}
+
+.health-icon{
+    max-height: 5%;
+    width: auto;
+}
+
+.video-background{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 250%;
+    min-height: 100%;
+}
+
+.videoOverlay{
+    opacity: .5;
+}
+
+.videoCutSceneContainer{
+    height: 100%;
+    text-align: center;
+}
+
+
+.video-cut-scene{
+    height: 100%;
+    border-radius: 25px;
+}
+
+.end-game-info-container{
+    height: 100%;
+    text-align: center;
+}
+
+.end-game-logo{
+    height: 50%;
+}
+
+.result-of-game-text{
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.end-game-button{
+    font-size: 30px;
+    padding: 8px;
+    position: relative;
+}
+
+.hide{
+    display: none;
+}

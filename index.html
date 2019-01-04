@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script src="main.js"></script>
+</head>
+
+<body>
+
+    <div class="start-screen">
+        <div class="start-background"></div>
+        <button class="start-button">Start</button>
+    </div>
+
+    <div class="picOverVideo hide"></div>
+
+    <div class="videoOverlay hide">
+        <video autoplay muted loop id="videoBackground" class="video-background">
+            <source src="media/video/videoBackground.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="header-container hide">
+        <img src="media/logo.png" alt="Power Rangers Logo">
+        <div class="about-game"><a href=" ">About The Game</a></div>
+
+        <!--<div class="games-played">-->
+            <!--<div class="label">Games Played</div>-->
+            <!--<div class="value"></div>-->
+        <!--</div>-->
+
+        <div class="reset-game-button-container">
+            <button class="reset">Reset Game</button>
+        </div>
+    </div>
+
+    <div class="left-column-container hide">
+        <div class="left-serpentera-wrapper"></div>
+    </div>
+
+
+
+    <div id="game-area" class="game-area hide">
+
+        <div class="end-game-info-container hide">
+            <img class='end-game-logo' src="media/youWinImage.png" alt="">
+            <div class="result-of-game-text">GAME OVER</div>
+            <button class="end-game-button">Reset Game!</button>
+        </div>
+
+        <div class="videoCutSceneContainer">
+            <video class='video-cut-scene hide' id="intro-vid" src="media/video/lordZeddIntroVid.mov"></video>
+            <video class='video-cut-scene hide' id="youLoseVideo" src="media/video/youLose.mov"></video>
+            <video class='video-cut-scene hide' id="youWinVideo" src="media/video/youWin.mov"></video>
+
+        </div>
+
+        <div class="cardsContainer hide"></div>
+        <div class="stats-container hide">
+            <div class="attempts">
+                <div class="label">Attempts</div>
+                <div class="value"></div>
+            </div>
+
+            <div class="current-health">
+                <div class="label">Health</div>
+                <div class="value"></div>
+            </div>
+
+            <div class="accuracy">
+                <div class="label">Accuracy</div>
+                <div class="value"></div>
+            </div>
+            <!--<div class="health-icon"><img src="media/lifeBarIcon.png"" alt=""></div>-->
+            <!--<progress class="health-bar hide" value="80"></progress>-->
+        </div>
+    </div>
+
+    <div class="villan-container hide"></div>
+
+
+
+</body>
+</html>
