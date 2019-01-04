@@ -45,77 +45,42 @@ body > *{
 
 .about-game{
     position: absolute;
-    top: 10%;
-    right: 1.5%;
+    top: 40%;
+    left: 1.5%;
 }
 
+.reset-game-button-container{
+    position: absolute;
+    top: 50%;
+    right: 1.5%;
+    height: 25%;
+    width: 10%;
+}
 
+.reset{
+    font-size: 80%;
+    width: 100%;
+}
 
 
 
 /*__________________________________Stats Left Panel__________________________*/
 
-.stats-container{
+.left-column-container{
     display: inline-block;
     height: 85%;
     width: 15%;
-    /*background-color: #2b542c;*/
     vertical-align: top;
-
 
 }
 
-.stats-wrapper-container{
+.left-serpentera-wrapper{
     background-image: url("media/serpentera.png");
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
-    /*position: relative;*/
-    /*text-align: center;*/
-    /*box-shadow: inset 0px 0px 0px 8px lightgray;*/
-    /*border-radius: 25px;*/
-    /*background-color: lightslategray;*/
-    /*height: 95%;*/
-    /*top: 2.5%;*/
 }
 
-.games-played{
-    /*background-color: #8c8c8c;*/
-    height: 25%;
-}
-
-.label{
-    position: relative;
-    top: 20%;
-}
-
-.value{
-    position: relative;
-    top: 50%;
-    font-size: 150%;
-}
-
-.attempts{
-    height: 25%;
-    /*background-color: #c0a16b;*/
-}
-
-.accuracy{
-    height: 25%;
-}
-
-.reset-game-button-container{
-    position: relative;
-    height: 25%;
-    /*background-color: #843534;*/
-}
-
-.reset{
-    position: absolute;
-    bottom: 15%;
-    transform: translate(-50%, -50%);
-    /*explain translate? don't know why its working*/
-}
 
 
 /*________________________________Villan Right Panel_________________________________*/
@@ -132,22 +97,19 @@ body > *{
 .picOverVideo{
     position: absolute;
     background-image: url("media/lordZeddBackground.png");
-    height: 75%;
+    height: 55%;
     width: 100%;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    top: 13%;
+    right: .5%;
+    top: 21%;
 }
 
 
 /*_________________________________Game Container____________________________________*/
 
-.hide{
-    display: none;
-}
-
-#game-area{
+.game-area{
     display: inline-block;
     height: 85%;
     width: 70%;
@@ -155,8 +117,9 @@ body > *{
     margin: 0 auto;
     font-size: 0;
     vertical-align: top;
-    background-color: yellow;
+    background-color: gray;
     border-radius: 35px;
+
 
 
     /*display: flex;*/
@@ -164,20 +127,31 @@ body > *{
     /*align-content: center;*/
 }
 
+.cardsContainer{
+    height: 80%;
+    width: 95%;
+    margin: auto;
+    position: relative;
+    top: 5%;
+}
+
 .card{
     display: inline-block;
     height: 28.5%;
-    /*background-color: yellow;*/
     width: 16.667%;
     position: relative;
 }
 
+/*.card:hover .back {*/
+    /*transform: rotateY(180deg);*/
+/*}*/
 
 .back{
     background-image: url("media/cardImages/cardBack.png");
 }
 
 .front, .back{
+    border-radius: 10%;
     height: 90%;
     width: 75%;
     background-size: contain;
@@ -189,22 +163,62 @@ body > *{
 
 /*_________________________________Health Bar____________________________________*/
 
-.health-bar-container{
+.stats-container{
     display: inline-block;
-    /*background-color: #5bc0de;*/
     height: 14.5%;
     width: 100%;
     text-align: center;
 
 }
 
-/*STILL DONT KNOW HOW TO VERTICAL ALIGN STUFF*/
+
+.current-health{
+    display: inline-block;
+    width: 25%;
+
+    height: 25%;
+}
+
+.label{
+    position: relative;
+    top: 20%;
+    font-size: 20px;
+}
+
+.value{
+    position: relative;
+    top: 50%;
+    font-size: 100%;
+    font-size: 35px;
+}
+
+.attempts{
+    display: inline-block;
+    width: 25%;
+
+    height: 25%;
+}
+
+.accuracy{
+    display: inline-block;
+    width: 25%;
+
+    height: 25%;
+}
+
+/*.games-played{*/
+    /*position: absolute;*/
+    /*bottom: 5%;*/
+    /*width: 25%;*/
+    /*height: 25%;*/
+    /*left: 25%;*/
+/*}*/
+
 .health-bar{
     position: relative;
     top: 40%;
     width:95%;
     height: 25%;
-    /*background-color: #2b542c;*/
 }
 
 .health-icon{
@@ -212,7 +226,7 @@ body > *{
     width: auto;
 }
 
-#videoBackground {
+.video-background{
     position: fixed;
     right: 0;
     bottom: 0;
@@ -222,4 +236,39 @@ body > *{
 
 .videoOverlay{
     opacity: .5;
+}
+
+.videoCutSceneContainer{
+    height: 100%;
+    text-align: center;
+}
+
+
+.video-cut-scene{
+    height: 100%;
+    border-radius: 25px;
+}
+
+.end-game-info-container{
+    height: 100%;
+    text-align: center;
+}
+
+.end-game-logo{
+    height: 50%;
+}
+
+.result-of-game-text{
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.end-game-button{
+    font-size: 30px;
+    padding: 8px;
+    position: relative;
+}
+
+.hide{
+    display: none;
 }
