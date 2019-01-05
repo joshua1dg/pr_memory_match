@@ -237,14 +237,15 @@ function healthModifier(){
         if (currentHealth%20 == 0){
             selectedAudio('lordZeddLaugh');
         }
-        if (currentHealth == 80){
-            selectedAudio('lordZeddLaugh');
+        if (currentHealth == 0){
             gameResultDisplayer('youLose');
         }
     }
 
     else if (correctMatches === 9){//9){
         console.log('You Won!');
+        gameResultDisplayer('youWin');
+
     }
 }
 
@@ -282,6 +283,15 @@ function gameReset(){
         $(cardsEventArray[indivCardEventIndex]).find('.back').removeClass('hide');
     }
 
+    $('.videoCutSceneContainer > .video-cut-scene').each(function(){
+        var videoId = $(this).attr('id');
+        console.log(videoId);
+        $(`#${videoId}`)[0].pause();
+    });
+    audioTrack.pause();
+    audioTrack.play();
+
+
     gamesPlayed += 1;
     attempts = 0;
     correctMatches = 0;
@@ -303,8 +313,4 @@ function gameReset(){
 }
 
 
-
-
-
-//classes and IDs
-//rounded corners
+//make buttons look amazing

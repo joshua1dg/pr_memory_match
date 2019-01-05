@@ -136,10 +136,6 @@ body > *{
 }
 
 .card{
-    /*transform: rotateY(180deg);*/
-    /*transition: 6s;*/
-    /*transform-style: preserve-3d;*/
-
     display: inline-block;
     height: 28.5%;
     width: 16.667%;
@@ -155,8 +151,10 @@ body > *{
 }
 
 .front, .back{
+    /*transform: rotateY(180deg);*/
+    /*transition: 6s;*/
+    /*transform-style: preserve-3d;*/
 
-    border-radius: 10%;
     height: 90%;
     width: 75%;
     background-size: contain;
@@ -276,4 +274,15 @@ body > *{
 
 .hide{
     display: none;
+}
+
+.reset, .end-game-button{
+    border-color: #e7e7e7;
+    color: black;
+    border-radius: 5px;
+}
+
+
+.reset:hover, .end-game-button:hover {
+    background: #e7e7e7;
 }
