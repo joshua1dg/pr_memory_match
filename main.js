@@ -28,6 +28,7 @@ function initializer(){
     $('.cardsContainer').on('click', '.card', cardFlips);
     $('.reset').click(gameReset);
     $('.end-game-button').click(gameReset);
+    $('#instructionButton').click(function(){$('.instructions').addClass('hide')});
 
 
 };
@@ -112,6 +113,20 @@ function afterInitialVideoSetup(){
     $('#intro-vid')[0].pause();
     $('#intro-vid').addClass('hide');
     $('.videoCutSceneContainer').addClass('hide');
+
+    if (gamesPlayed === 0){
+        $('.instructions').removeClass('hide');
+        $('body').css('pointer-events', 'none');
+        $('#instructionButton').css('pointer-events', 'auto');
+
+        $('#instructionButton').click(function(){
+            $('.instructions').addClass('hide');
+            $('body').css('pointer-events', '');
+        });
+    }
+
+
+
     $('.picOverVideo').removeClass('hide');
     $('.cardsContainer').removeClass('hide');
     $('.stats-container').removeClass('hide');
@@ -257,7 +272,7 @@ function statsDisplayer(){
         }else{
         $('.current-health > .value').text(currentHealth + '%');
         $('.attempts > .value').text(attempts);
-        $('.accuracy > .value').text((correctMatches/attempts).toFixed(2)*100 + '%');
+        $('.accuracy > .value').text(((correctMatches/attempts)*100).toFixed(2) + '%');
     }
 }
 
