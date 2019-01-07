@@ -29,6 +29,58 @@ body > *{
     font-size: 300%;
 }
 
+/*_________________________________Game Instruction____________________________________*/
+
+.instructions{
+    position: absolute;
+    background-color: #a94442;
+    background-image: url("media/instructionImage.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px;
+    color: white;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 25%;
+    height: 70%;
+    text-align: center;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.instructionHeaderContainer{
+    margin-top: 10%;
+    height: 30%;
+}
+
+.instructionHeaderContainer > h1{
+    font-size: 32px;
+
+}
+
+.instructionTextContainer{
+    margin: 0 7% 0 7%;
+
+}
+
+.instructionTextContainer > p{
+    font-size: 20px;
+
+}
+
+.instructionButtonContainer{
+    margin-top: 20%;
+    position: relative;
+    bottom: 5%;
+}
+.instructionButtonContainer > button{
+    position: relative;
+    font-size: 20px;
+    padding: 6px;
+}
+
+
 /*_____________________________________header____________________________________*/
 .header-container{
     height: 15%;
@@ -64,7 +116,7 @@ body > *{
 
 
 
-/*__________________________________Stats Left Panel__________________________*/
+/*__________________________________Serpentera Left Panel__________________________*/
 
 .left-column-container{
     display: inline-block;
@@ -119,9 +171,6 @@ body > *{
     vertical-align: top;
     background-color: gray;
     border-radius: 35px;
-
-
-
     /*display: flex;*/
     /*flex-wrap: wrap;*/
     /*align-content: center;*/
@@ -136,10 +185,6 @@ body > *{
 }
 
 .card{
-    /*transform: rotateY(180deg);*/
-    /*transition: 6s;*/
-    /*transform-style: preserve-3d;*/
-
     display: inline-block;
     height: 28.5%;
     width: 16.667%;
@@ -155,8 +200,10 @@ body > *{
 }
 
 .front, .back{
+    /*transform: rotateY(180deg);*/
+    /*transition: 6s;*/
+    /*transform-style: preserve-3d;*/
 
-    border-radius: 10%;
     height: 90%;
     width: 75%;
     background-size: contain;
@@ -166,7 +213,7 @@ body > *{
     background-repeat: no-repeat;
 }
 
-/*_________________________________Health Bar____________________________________*/
+/*_________________________________Health and Info____________________________________*/
 
 .stats-container{
     display: inline-block;
@@ -231,6 +278,9 @@ body > *{
     width: auto;
 }
 
+
+/*_________________________________Videos____________________________________*/
+
 .video-background{
     position: fixed;
     right: 0;
@@ -254,6 +304,10 @@ body > *{
     border-radius: 25px;
 }
 
+
+/*_________________________________End of Game____________________________________*/
+
+
 .end-game-info-container{
     height: 100%;
     text-align: center;
@@ -274,6 +328,20 @@ body > *{
     position: relative;
 }
 
+.reset, .end-game-button{
+    border-color: #e7e7e7;
+    color: black;
+    border-radius: 5px;
+}
+
+.reset:hover, .end-game-button:hover {
+    background: #e7e7e7;
+}
+
+
+
 .hide{
     display: none;
 }
+
+

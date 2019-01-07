@@ -28,6 +28,7 @@ function initializer(){
     $('.cardsContainer').on('click', '.card', cardFlips);
     $('.reset').click(gameReset);
     $('.end-game-button').click(gameReset);
+    $('#instructionButton').click(function(){$('.instructions').addClass('hide')});
 
 
 };
@@ -112,6 +113,20 @@ function afterInitialVideoSetup(){
     $('#intro-vid')[0].pause();
     $('#intro-vid').addClass('hide');
     $('.videoCutSceneContainer').addClass('hide');
+
+    if (gamesPlayed === 0){
+        $('.instructions').removeClass('hide');
+        $('body').css('pointer-events', 'none');
+        $('#instructionButton').css('pointer-events', 'auto');
+
+        $('#instructionButton').click(function(){
+            $('.instructions').addClass('hide');
+            $('body').css('pointer-events', '');
+        });
+    }
+
+
+
     $('.picOverVideo').removeClass('hide');
     $('.cardsContainer').removeClass('hide');
     $('.stats-container').removeClass('hide');
@@ -237,14 +252,15 @@ function healthModifier(){
         if (currentHealth%20 == 0){
             selectedAudio('lordZeddLaugh');
         }
-        if (currentHealth == 80){
-            selectedAudio('lordZeddLaugh');
+        if (currentHealth == 0){
             gameResultDisplayer('youLose');
         }
     }
 
     else if (correctMatches === 9){//9){
         console.log('You Won!');
+        gameResultDisplayer('youWin');
+
     }
 }
 
@@ -256,7 +272,7 @@ function statsDisplayer(){
         }else{
         $('.current-health > .value').text(currentHealth + '%');
         $('.attempts > .value').text(attempts);
-        $('.accuracy > .value').text((correctMatches/attempts).toFixed(2)*100 + '%');
+        $('.accuracy > .value').text(((correctMatches/attempts)*100).toFixed(2) + '%');
     }
 }
 
@@ -282,6 +298,15 @@ function gameReset(){
         $(cardsEventArray[indivCardEventIndex]).find('.back').removeClass('hide');
     }
 
+    $('.videoCutSceneContainer > .video-cut-scene').each(function(){
+        var videoId = $(this).attr('id');
+        console.log(videoId);
+        $(`#${videoId}`)[0].pause();
+    });
+    audioTrack.pause();
+    audioTrack.play();
+
+
     gamesPlayed += 1;
     attempts = 0;
     correctMatches = 0;
@@ -303,8 +328,4 @@ function gameReset(){
 }
 
 
-
-
-
-//classes and IDs
-//rounded corners
+//make buttons look amazing
