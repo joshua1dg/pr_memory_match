@@ -22,6 +22,8 @@ class initializer{
             this.handleCardClick(event)});
 
         $('.headerResetButton').on('click', this.handleReset);
+
+        $('.card-container').on('click', '.video-cut-scene', this.media.removeVideoObject)
     };
 
     handleCardClick(event) {
@@ -37,6 +39,9 @@ class initializer{
                 $('.card-container *').removeClass('disableClick');
                 this.handleStats();
                 this.handleHealth(cardMatch);
+                if(this.gameLogic.matches === 1){
+                    this.handleEndGame('youWin');
+                }
             }, 2000);
             this.gameLogic.attempts += 1;
         }
@@ -55,10 +60,15 @@ class initializer{
     handleHealth(cardMatchResult){
         const currentHealth = this.gameLogic.healthModifier(cardMatchResult);
         this.gameLogic.lifeBarIconMover(currentHealth);
+        if (currentHealth === 0){
+            this.handleEndGame('youLose');
+        }
     }
 
     handleGameStart(){
-        this.backgroundMusic = this.media.playAudio('gameAudio', .4);
+        const introVid = this.media.createVideoObj('lordZeddIntroVid');
+        this.media.playVideo();
+        this.media.playAudio('gameAudio', .4);
     }
 
     handleReset = () => {
@@ -66,6 +76,11 @@ class initializer{
         this.handleStats(100);
         this.handleHealth();
         this.card.resetCards();
+    }
+
+    handleEndGame(videoToShow){
+        this.media.createVideoObj(videoToShow);
+        this.media.playVideo();
     }
 
 

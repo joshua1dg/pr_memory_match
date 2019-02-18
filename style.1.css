@@ -104,6 +104,11 @@ body{
     position: absolute;
 }
 
+.video-cut-scene{
+    position: absolute;
+    border-radius: 4%;
+}
+
 
 /* ___________________________________________________Right Panel_________________________________________________________ */
 .rightVillainContainer{
