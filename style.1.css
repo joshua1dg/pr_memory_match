@@ -1,0 +1,168 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+/* ___________________________________________________Header_________________________________________________________ */
+
+
+.header{
+    height: 15%;
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.header > img{
+    height: 85%;
+}
+
+.header > button {
+    position: absolute;
+    right: 5%;
+}
+
+.attempts{
+    position: absolute;
+    left: 5%;
+    transform: translate(-50%, -50%)
+}
+
+.accuracy{
+    position: absolute;
+    left: 15%;
+    transform: translate(-50%, -50%)
+}
+
+/* ___________________________________________________Mid Section Container_______________________________________________ */
+
+.mid-sections-container{
+    height: 70%;
+    width: 100%;
+    background-color: aqua;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/* ___________________________________________________Left Panel_________________________________________________________ */
+.leftVillainContainer{
+    height: 100%;;
+    width: 20%;
+    background-color: yellow;
+    overflow: hidden;
+}
+
+.leftVillainContainer > img{
+    height: 100%;
+    width: 100%;
+}
+
+
+/* ___________________________________________________GameBoard_________________________________________________________ */
+.game-container{
+    height: 100%;
+    background-color: brown;
+    width: 60%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.zeddBoardBackground{
+    position: absolute;
+    height: 90%;
+}
+
+.card-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 1;
+
+}
+.singleCardDiv{
+    width: 11%;
+    margin: 2%;
+    position: relative;
+}
+
+.cardBack, .cardFront{
+    border-radius: 5%;
+    height: 100%;
+    width: 100%;
+}
+
+.cardBack{
+    position: absolute;
+}
+
+
+/* ___________________________________________________Right Panel_________________________________________________________ */
+.rightVillainContainer{
+    height: 100%;
+    width: 20%;
+    background-color: darkgreen;
+    overflow: hidden;
+}
+
+.rightVillainContainer > img{
+    width: 100%;
+}
+
+
+/* ___________________________________________________Footer_________________________________________________________ */
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15%;
+    width: 100%;
+    background-color: chocolate;
+}
+
+.health-container{
+    position: relative;
+    height: 10%;
+    width: 80%;
+}
+
+.full-bar{
+    height: 100%;
+    width: 100%;
+    background-color: #565656;
+    border-radius: 15%;
+}
+
+.life-left{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #74070B;
+    border-radius: 15%;
+}
+
+.life-bar-icon{
+    height: 800%;
+    position: absolute;
+    transform: translate(60%, -45%);
+    right: 0;
+}
+
+
+
+
+.hide{
+    display: none;
+}
+
+.disableClick{
+    pointer-events: none;
+}

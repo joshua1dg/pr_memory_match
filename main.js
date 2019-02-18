@@ -326,6 +326,3 @@ function gameReset(){
 
     afterInitialVideoSetup();
 }
-
-
-//make buttons look amazing
