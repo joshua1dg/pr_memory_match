@@ -23,7 +23,25 @@ class initializer{
 
         $('.headerResetButton').on('click', this.handleReset);
 
-        $('.card-container').on('click', '.video-cut-scene', this.media.removeVideoObject)
+        $('.game-container').on('click', '.video-cut-scene', this.media.removeVideoObject)
+
+        $('.instructions>button').on('click', () => {
+            $('.instructions').remove();
+            $('.card-container').removeClass('disableClick');
+            this.media.playAudio('lordZeddAudioOnStart');
+
+        $('.end-game-info-container > button').on('click', () => {
+            $('.end-game-info-container').remove();
+            $('.card-container').removeClass('disableClick');
+            this.handleReset();
+        })
+
+
+        })
+
+        // $('.card-container').on('ended', '.video-cut-scene', function () {
+        //     $('.video-cut-scene').remove();
+        // })
     };
 
     handleCardClick(event) {
@@ -66,9 +84,13 @@ class initializer{
     }
 
     handleGameStart(){
-        const introVid = this.media.createVideoObj('lordZeddIntroVid');
+        $('.card-container').addClass('disableClick');
+        const videoElement = this.media.createVideoObj('lordZeddIntroVid');
         this.media.playVideo();
-        this.media.playAudio('gameAudio', .4);
+        videoElement.on('ended', function () {
+            videoElement.remove();
+        })
+        this.backgroundMusic = this.media.playAudio('gameAudio', .4);
     }
 
     handleReset = () => {
@@ -76,11 +98,18 @@ class initializer{
         this.handleStats(100);
         this.handleHealth();
         this.card.resetCards();
+        this.media.playAudio('lordZeddAudioOnStart');
     }
 
     handleEndGame(videoToShow){
+        $('.card-container *').addClass('disableClick');
         this.media.createVideoObj(videoToShow);
         this.media.playVideo();
+        $('.end-game-info-container').removeClass('hide');
+        if(videoToShow === 'youWin'){
+            $('.result-of-game-text').text('You Win! Play Again?');
+            $('.end-game-logo').attr('src', '/media/miscImages/youWinImage.png');
+        }
     }
 
 

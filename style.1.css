@@ -2,6 +2,7 @@ body{
     width: 100vw;
     height: 100vh;
     margin: 0;
+    background-image: url('/media/miscImages/boardBackground.jpg');
 }
 
 /* ___________________________________________________Header_________________________________________________________ */
@@ -9,11 +10,16 @@ body{
 
 .header{
     height: 15%;
-    background-color: pink;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    /* background-color: darkgray; */
+
+}
+
+.header > p{
+    color: white;
 }
 
 .header > img{
@@ -37,12 +43,16 @@ body{
     transform: translate(-50%, -50%)
 }
 
+.headerResetButton{
+    padding: .75%;
+    border-radius: 20%;
+}
+
 /* ___________________________________________________Mid Section Container_______________________________________________ */
 
 .mid-sections-container{
     height: 70%;
     width: 100%;
-    background-color: aqua;
     display: flex;
     flex-wrap: wrap;
 }
@@ -52,7 +62,6 @@ body{
 .leftVillainContainer{
     height: 100%;;
     width: 20%;
-    background-color: yellow;
     overflow: hidden;
 }
 
@@ -65,7 +74,6 @@ body{
 /* ___________________________________________________GameBoard_________________________________________________________ */
 .game-container{
     height: 100%;
-    background-color: brown;
     width: 60%;
     display: flex;
     position: relative;
@@ -76,6 +84,7 @@ body{
 .zeddBoardBackground{
     position: absolute;
     height: 90%;
+    opacity: .4;
 }
 
 .card-container{
@@ -86,7 +95,9 @@ body{
     align-items: center;
     flex-wrap: wrap;
     z-index: 1;
-
+    /* background-image: url('media/miscImages/boardBackground.jpg'); */
+    background-size: cover;
+    border-radius: 5%;
 }
 .singleCardDiv{
     width: 11%;
@@ -107,6 +118,52 @@ body{
 .video-cut-scene{
     position: absolute;
     border-radius: 4%;
+    z-index: 3;
+}
+
+.instructions, .end-game-info-container{
+    position: absolute;
+    border-radius: 5%;
+    color: white;
+    width: 40%;
+    height: 80%;
+    text-align: center;
+    z-index: 2;
+}
+
+.instructions{
+    background-image: url("media/miscImages/instructionImage.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+
+.instructions > p, .instructions> h1{
+    padding: 5%;
+}
+
+.instructions > button{
+    border-radius: 20%;
+    padding: 2.5%;
+}
+
+.end-game-info-container{
+    background-color: darkgray;
+}
+
+.end-game-info-container > img{
+    height: 50%;
+    margin-top: 10%;
+}
+
+.result-of-game-text{
+    margin-top: 10%;
+}
+
+.end-game-info-container > button{
+    margin-top: 10%;
+    padding: 2%;
+    border-radius: 20%;
 }
 
 
@@ -114,7 +171,6 @@ body{
 .rightVillainContainer{
     height: 100%;
     width: 20%;
-    background-color: darkgreen;
     overflow: hidden;
 }
 
@@ -130,7 +186,7 @@ body{
     align-items: center;
     height: 15%;
     width: 100%;
-    background-color: chocolate;
+    background-color: darkgray;
 }
 
 .health-container{
@@ -142,7 +198,7 @@ body{
 .full-bar{
     height: 100%;
     width: 100%;
-    background-color: #565656;
+    background-color: black;
     border-radius: 15%;
 }
 
@@ -163,6 +219,14 @@ body{
 
 
 
+/* ___________________________________________________General_________________________________________________________ */
+
+
+.video-background{
+    position: absolute;
+    height: 500%;
+    opacity: .6
+}
 
 .hide{
     display: none;

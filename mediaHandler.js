@@ -12,15 +12,19 @@ class Media{
             src: `media/video/${fileName}.mov`
         });
 
-        $('.card-container').append(videoElement);
+        $('.game-container').prepend(videoElement);
 
+        return videoElement;
     }
 
     playVideo(){
-        $('.video-cut-scene')[0].play();
+        const videoElement = $('.video-cut-scene');
+        videoElement[0].play();
     }
 
     removeVideoObject(){
         $('.video-cut-scene').remove();
     }
+
+
 }
