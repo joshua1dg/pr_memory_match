@@ -31,7 +31,7 @@ class initializer{
             this.media.playAudio('lordZeddAudioOnStart');
 
         $('.end-game-info-container > button').on('click', () => {
-            $('.end-game-info-container').remove();
+            $('.end-game-info-container').addClass('hide');
             $('.card-container').removeClass('disableClick');
             this.handleReset();
         })
@@ -45,6 +45,7 @@ class initializer{
     };
 
     handleCardClick(event) {
+        $(event.currentTarget).addClass('disableClick');
         this.gameLogic.cardShow(event);
         console.log('this is the event: ', event.currentTarget.attributes.cardName.value);
         this.media.playAudio(event.currentTarget.attributes.cardName.value);
@@ -78,8 +79,11 @@ class initializer{
     handleHealth(cardMatchResult){
         const currentHealth = this.gameLogic.healthModifier(cardMatchResult);
         this.gameLogic.lifeBarIconMover(currentHealth);
+
         if (currentHealth === 0){
             this.handleEndGame('youLose');
+        } else if (currentHealth % 30 === 0) {
+            this.media.playAudio('lordZeddLaugh');
         }
     }
 
@@ -91,6 +95,7 @@ class initializer{
             videoElement.remove();
         })
         this.backgroundMusic = this.media.playAudio('gameAudio', .4);
+        console.log('background music: ', this.backgroundMusic)
     }
 
     handleReset = () => {
@@ -106,9 +111,13 @@ class initializer{
         this.media.createVideoObj(videoToShow);
         this.media.playVideo();
         $('.end-game-info-container').removeClass('hide');
-        if(videoToShow === 'youWin'){
+        console.log('video name to show: ', videoToShow)
+        if (videoToShow === 'youWin'){
             $('.result-of-game-text').text('You Win! Play Again?');
             $('.end-game-logo').attr('src', '/media/miscImages/youWinImage.png');
+        } else{
+            $('.result-of-game-text').text('You Lose! Try Again?');
+            $('.end-game-logo').attr('src', '/media/miscImages/youLoseImage.png');
         }
     }
 

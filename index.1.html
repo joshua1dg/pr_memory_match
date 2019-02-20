@@ -3,6 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="style.1.css">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
     <script src="cardSetup.js"></script>
     <script src="gameLogic.js"></script>
@@ -12,14 +13,19 @@
 
 <body>
 
-    <video autoplay muted loop id="videoBackground" class="video-background">
-        <source src="media/video/videoBackground.mp4" type="video/mp4">
-    </video>   
+    <div class="video-background-container">
+        <video autoplay muted loop id="videoBackground" class="video-background">
+            <source src="media/video/videoBackground.mp4" type="video/mp4">
+        </video>   
+    </div>
+    
 
     <div class="header">
         <img class='headerLogo' src="./media/miscImages/logo.png" alt="">
-        <p class='attempts'>Attempts: 0</p>
-        <p class='accuracy'>Accuracy: 100%</p>
+        <div class="stat-container">
+            <p class='attempts'>Attempts: 0</p>
+            <p class='accuracy'>Accuracy: 100%</p>
+        </div>
         <button class='headerResetButton'>Reset Game</button>
     </div>
     <div class="mid-sections-container">
@@ -29,7 +35,7 @@
         <div class="game-container">
 
             <div class="instructions">
-                <h1>Help the Rangers Defeat Lord Zedd!</h1>
+                <h2>Help the Rangers Defeat Lord Zedd!</h1>
                 <p>The Power Rangers Need Your Help! Lord Zedd has returned and plans to destroy the planet!
                     Help the Power Rangers by matching each trading card, make more than 10 wrong moves and it's game over!
                     Do you have what it takes to save the planet?
