@@ -1,8 +1,10 @@
 class Media{
-    playAudio(fileName, volume=1){
+    playAudio(fileName, volume=1, loop=false){
         var audio = new Audio(`./media/audio/${fileName}.mp3`);
         audio.volume = volume;
-        return audio.play();
+        audio.loop = loop;
+        audio.play();
+        return audio;
     };
 
     createVideoObj(fileName){

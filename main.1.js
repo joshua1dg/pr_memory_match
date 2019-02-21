@@ -23,7 +23,10 @@ class initializer{
 
         $('.headerResetButton').on('click', this.handleReset);
 
-        $('.game-container').on('click', '.video-cut-scene', this.media.removeVideoObject)
+        $('.game-container').on('click', '.video-cut-scene', () => {
+            this.media.removeVideoObject();
+            this.backgroundMusic = this.media.playAudio('gameAudio', .4, true);
+        })
 
         $('.instructions>button').on('click', () => {
             $('.instructions').remove();
@@ -39,9 +42,6 @@ class initializer{
 
         })
 
-        // $('.card-container').on('ended', '.video-cut-scene', function () {
-        //     $('.video-cut-scene').remove();
-        // })
     };
 
     handleCardClick(event) {
@@ -80,7 +80,7 @@ class initializer{
         const currentHealth = this.gameLogic.healthModifier(cardMatchResult);
         this.gameLogic.lifeBarIconMover(currentHealth);
 
-        if (currentHealth === 0){
+        if (currentHealth === 90){
             this.handleEndGame('youLose');
         } else if (currentHealth % 30 === 0) {
             this.media.playAudio('lordZeddLaugh');
@@ -91,10 +91,11 @@ class initializer{
         $('.card-container').addClass('disableClick');
         const videoElement = this.media.createVideoObj('lordZeddIntroVid');
         this.media.playVideo();
-        videoElement.on('ended', function () {
+        videoElement.on('ended', () => {
             videoElement.remove();
+            this.backgroundMusic = this.media.playAudio('gameAudio', .4, true);
+
         })
-        this.backgroundMusic = this.media.playAudio('gameAudio', .4);
         console.log('background music: ', this.backgroundMusic)
     }
 
@@ -110,6 +111,8 @@ class initializer{
         $('.card-container *').addClass('disableClick');
         this.media.createVideoObj(videoToShow);
         this.media.playVideo();
+        this.backgroundMusic.pause();
+        this.backgroundMusic.currentTime = 0;
         $('.end-game-info-container').removeClass('hide');
         console.log('video name to show: ', videoToShow)
         if (videoToShow === 'youWin'){
