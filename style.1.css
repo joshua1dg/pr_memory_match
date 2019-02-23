@@ -8,6 +8,35 @@ body{
     font-family: 'Orbitron', sans-serif;
 }
 
+/* ___________________________________________________Start Screen____________________________________________________ */
+
+.start-screen{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 3;
+}
+
+.start-background{
+    background-image: url(media/miscImages/startWallpaper.png);
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: top;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.start-button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2%;
+    font-size: 300%;
+    border-radius: 7.5%;
+    font-family: inherit
+}
+
 /* ___________________________________________________Header_________________________________________________________ */
 
 
@@ -22,12 +51,14 @@ body{
 
 .stat-container{
     color: white;
+    width: 16%;
 }
 
-.header > img{
-    height: 85%;
+.headerLogo{
+    height: 100%;
     order: 1;
-    margin-right: 4%;
+    margin-right: 7%;
+    margin-top: 1%;
 }
 
 .headerResetButton{
@@ -126,15 +157,20 @@ body{
     background-image: url("media/miscImages/instructionImage.jpg");
     background-size: cover;
     background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 
 .instructions > p, .instructions> h1{
-    padding: 5%;
+    padding: 0 5%;
     line-height: 21px;
 }
 
 .instructions > button{
+    width: 35%;
     border-radius: 20%;
     padding: 2.5%;
     font-family: inherit;

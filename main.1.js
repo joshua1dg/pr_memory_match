@@ -2,7 +2,6 @@ $(document).ready(() => {new initializer()});
 
 class initializer{
 
-        //WHY DID IT NOT WORK WHEN CONST EQUALED TO CARD WITH A CAPITAL C
     constructor() {
         this.card = new Card();
         this.card.renderCardsNewGame();
@@ -11,13 +10,19 @@ class initializer{
         this.media = new Media();
 
         this.clickHandlers();
-        this.handleGameStart();
+        // this.handleGameStart();
 
         this.backgroundMusic = null;
+
     };
 
 
     clickHandlers() {
+        $('.start-button').on('click', () => {
+            $('.start-screen').remove();
+            this.handleGameStart();
+        })
+
         $('.card-container').on('click', '.singleCardDiv', (event) => {
             this.handleCardClick(event)});
 
@@ -58,7 +63,7 @@ class initializer{
                 $('.card-container *').removeClass('disableClick');
                 this.handleStats();
                 this.handleHealth(cardMatch);
-                if(this.gameLogic.matches === 1){
+                if(this.gameLogic.matches === 9){
                     this.handleEndGame('youWin');
                 }
             }, 2000);
@@ -80,7 +85,7 @@ class initializer{
         const currentHealth = this.gameLogic.healthModifier(cardMatchResult);
         this.gameLogic.lifeBarIconMover(currentHealth);
 
-        if (currentHealth === 90){
+        if (currentHealth === 0){
             this.handleEndGame('youLose');
         } else if (currentHealth % 30 === 0) {
             this.media.playAudio('lordZeddLaugh');
@@ -108,8 +113,9 @@ class initializer{
     }
 
     handleEndGame(videoToShow){
+        console.log('this is backgorund music in end game: ', this.backgroundMusic);
         $('.card-container *').addClass('disableClick');
-        this.media.createVideoObj(videoToShow);
+        const videoElement = this.media.createVideoObj(videoToShow);
         this.media.playVideo();
         this.backgroundMusic.pause();
         this.backgroundMusic.currentTime = 0;
@@ -122,6 +128,12 @@ class initializer{
             $('.result-of-game-text').text('You Lose! Try Again?');
             $('.end-game-logo').attr('src', '/media/miscImages/youLoseImage.png');
         }
+
+        videoElement.on('ended', () => {
+            videoElement.remove();
+            this.backgroundMusic = this.media.playAudio('gameAudio', .4, true);
+
+        })
     }
 
 
