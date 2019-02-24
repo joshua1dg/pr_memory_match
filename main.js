@@ -1,4 +1,6 @@
-$(document).ready(() => {new initializer()});
+$(document).ready(() => {
+    new initializer()
+});
 
 class initializer{
 
@@ -33,6 +35,7 @@ class initializer{
             $('.instructions').remove();
             $('.card-container').removeClass('disableClick');
             this.media.playAudio('lordZeddAudioOnStart');
+        })
 
         $('.end-game-info-container > button').on('click', () => {
             $('.end-game-info-container').addClass('hide');
@@ -41,13 +44,10 @@ class initializer{
         })
 
 
-        })
-
     };
 
     handleStartPage(){
         const music = this.media.playAudio('startPageMusic', 1, true);
-        $('.start-page').append('<video>')
 
         $('.start-button').on('click', () => {
             $('.start-screen').remove();
@@ -110,10 +110,19 @@ class initializer{
     }
 
     handleReset = () => {
+        if(this.backgroundMusic !== null){
+            this.backgroundMusic.pause()
+            this.backgroundMusic.currentTime = 0;
+        } else{
+            this.backgroundMusic = this.media.playAudio('gameAudio', .4, true);
+        }
+
+        this.media.removeVideoObject();
         this.gameLogic.resetLogic();
         this.handleStats(100);
         this.handleHealth();
         this.card.resetCards();
+        this.backgroundMusic.play();
         this.media.playAudio('lordZeddAudioOnStart');
     }
 
