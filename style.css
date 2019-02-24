@@ -1,347 +1,297 @@
 body{
+    width: 100vw;
     height: 100vh;
-    background-color: black;
     margin: 0;
-    font-size: 0;
+    background-image: url('/media/miscImages/boardBackground.jpg');
+    background-size: cover;
+    user-select: none;
+    font-family: 'Orbitron', sans-serif;
 }
 
-body > *{
-    font-size: initial;
-}
+/* ___________________________________________________Start Screen____________________________________________________ */
 
 .start-screen{
-    position: relative;
+    position: absolute;
     height: 100%;
+    width: 100%;
+    z-index: 3;
 }
 
 .start-background{
-    background-image: url("media/startWallpaper.png");
+    background-image: url(media/miscImages/startWallpaper.png);
     background-size: cover;
+    background-position-x: center;
+    background-position-y: top;
     background-repeat: no-repeat;
     height: 100%;
 }
 
 .start-button{
     position: absolute;
-    top: 50%;
-    left: 45%;
-    /*padding: 5%;*/
-    font-size: 300%;
-}
-
-/*_________________________________Game Instruction____________________________________*/
-
-.instructions{
-    position: absolute;
-    background-color: #a94442;
-    background-image: url("media/instructionImage.jpg");
-    background-size: cover;
-    background-position: center;
-    border-radius: 25px;
-    color: white;
-    top: 20%;
+    bottom: 10%;
     left: 50%;
     transform: translate(-50%);
-    width: 25%;
-    height: 70%;
-    text-align: center;
-    margin: 0 auto;
-    z-index: 1;
+    padding: 2%;
+    font-size: 300%;
+    border-radius: 7.5%;
+    font-family: inherit;
 }
 
-.instructionHeaderContainer{
-    margin-top: 10%;
+.video-start-page-container{
+    position: absolute;
+    bottom: 50%;
     height: 30%;
-}
-
-.instructionHeaderContainer > h1{
-    font-size: 32px;
-
-}
-
-.instructionTextContainer{
-    margin: 0 7% 0 7%;
-
-}
-
-.instructionTextContainer > p{
-    font-size: 20px;
-
-}
-
-.instructionButtonContainer{
-    margin-top: 20%;
-    position: relative;
-    bottom: 5%;
-}
-.instructionButtonContainer > button{
-    position: relative;
-    font-size: 20px;
-    padding: 6px;
-}
-
-
-/*_____________________________________header____________________________________*/
-.header-container{
-    height: 15%;
-    background-color: dimgrey;
-    border-radius: 25px;
-    opacity: .6;
-    text-align: center;
-    position: relative;
-}
-
-.header-container > img{
-    height: 95%;
-}
-
-.about-game{
-    position: absolute;
-    top: 40%;
-    left: 1.5%;
-}
-
-.reset-game-button-container{
-    position: absolute;
-    top: 50%;
-    right: 1.5%;
-    height: 25%;
-    width: 10%;
-}
-
-.reset{
-    font-size: 80%;
     width: 100%;
+    transform: translate(0, 50%);
+    text-align: center;
 }
 
-
-
-/*__________________________________Serpentera Left Panel__________________________*/
-
-.left-column-container{
-    display: inline-block;
-    height: 85%;
-    width: 15%;
-    vertical-align: top;
-
-}
-
-.left-serpentera-wrapper{
-    background-image: url("media/serpentera.png");
-    background-size: cover;
-    background-repeat: no-repeat;
+#startPageVideo{
     height: 100%;
-}
-
-
-
-/*________________________________Villan Right Panel_________________________________*/
-.villan-container{
-    display: inline-block;
-    background-image: url("media/lordZedd.png");
-    height: 85%;
-    width: 15%;
-    background-size: cover;
-    background-position: center;
-    vertical-align: top;
-}
-
-.picOverVideo{
-    position: absolute;
-    background-image: url("media/lordZeddBackground.png");
-    height: 55%;
-    width: 100%;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    right: .5%;
-    top: 21%;
-}
-
-
-/*_________________________________Game Container____________________________________*/
-
-.game-area{
-    display: inline-block;
-    height: 85%;
-    width: 70%;
-    /*centers all child elements within game-area*/
-    margin: 0 auto;
-    font-size: 0;
-    vertical-align: top;
-    background-color: gray;
-    border-radius: 35px;
-    /*display: flex;*/
-    /*flex-wrap: wrap;*/
-    /*align-content: center;*/
-}
-
-.cardsContainer{
-    height: 80%;
-    width: 95%;
-    margin: auto;
-    position: relative;
-    top: 5%;
-}
-
-.card{
-    display: inline-block;
-    height: 28.5%;
-    width: 16.667%;
-    position: relative;
-}
-
-/*.card:hover .back {*/
-    /*transform: rotateY(180deg);*/
-/*}*/
-
-.back{
-    background-image: url("media/cardImages/cardBack.png");
-}
-
-.front, .back{
-    /*transform: rotateY(180deg);*/
-    /*transition: 6s;*/
-    /*transform-style: preserve-3d;*/
-
-    height: 90%;
-    width: 75%;
-    background-size: contain;
-    position: absolute;
-    left: 12.5%;
-    top: 5%;
-    background-repeat: no-repeat;
-}
-
-/*_________________________________Health and Info____________________________________*/
-
-.stats-container{
-    display: inline-block;
-    height: 14.5%;
-    width: 100%;
-    text-align: center;
-
-}
-
-
-.current-health{
-    display: inline-block;
-    width: 25%;
-
-    height: 25%;
-}
-
-.label{
-    position: relative;
-    top: 20%;
-    font-size: 20px;
-}
-
-.value{
-    position: relative;
-    top: 50%;
-    font-size: 100%;
-    font-size: 35px;
-}
-
-.attempts{
-    display: inline-block;
-    width: 25%;
-
-    height: 25%;
-}
-
-.accuracy{
-    display: inline-block;
-    width: 25%;
-
-    height: 25%;
-}
-
-/*.games-played{*/
-    /*position: absolute;*/
-    /*bottom: 5%;*/
-    /*width: 25%;*/
-    /*height: 25%;*/
-    /*left: 25%;*/
-/*}*/
-
-.health-bar{
-    position: relative;
-    top: 40%;
-    width:95%;
-    height: 25%;
-}
-
-.health-icon{
-    max-height: 5%;
-    width: auto;
-}
-
-
-/*_________________________________Videos____________________________________*/
-
-.video-background{
-    position: fixed;
-    right: 0;
+    border-radius: 5%;
     bottom: 0;
-    min-width: 250%;
-    min-height: 100%;
 }
 
-.videoOverlay{
-    opacity: .5;
+/* ___________________________________________________Header_________________________________________________________ */
+
+
+.header{
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 0 3%;
 }
 
-.videoCutSceneContainer{
+.stat-container{
+    color: white;
+    width: 16%;
+}
+
+.headerLogo{
     height: 100%;
-    text-align: center;
+    order: 1;
+    margin-right: 7%;
+    margin-top: 1%;
 }
 
+.headerResetButton{
+    font-family: inherit;
+    padding: .75%;
+    border-radius: 20%;
+    order: 1;
+}
+
+/* ___________________________________________________Mid Section Container_______________________________________________ */
+
+.mid-sections-container{
+    height: 70%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/* ___________________________________________________Left Panel_________________________________________________________ */
+.leftVillainContainer{
+    height: 100%;;
+    width: 20%;
+    position: relative;
+    opacity: .6;
+}
+
+.leftVillainContainer > img{
+    height: 100%;
+    width: 100%
+}
+
+
+/* ___________________________________________________GameBoard_________________________________________________________ */
+.game-container{
+    height: 100%;
+    width: 60%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.zeddBoardBackground{
+    position: absolute;
+    height: 90%;
+    opacity: .4;
+}
+
+.card-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+    background-size: cover;
+    border-radius: 5%;
+}
+.singleCardDiv{
+    width: 11%;
+    margin: 2%;
+    position: relative;
+    opacity: .85;
+}
+
+.cardBack, .cardFront{
+    border-radius: 5%;
+    height: 100%;
+    width: 100%;
+}
+
+.cardBack{
+    position: absolute;
+}
 
 .video-cut-scene{
-    height: 100%;
-    border-radius: 25px;
+    position: absolute;
+    border-radius: 4%;
+    z-index: 3;
+}
+
+.instructions, .end-game-info-container{
+    position: absolute;
+    border-radius: 5%;
+    color: white;
+    width: 40%;
+    height: 85%;
+    text-align: center;
+    z-index: 2;
+}
+
+.instructions{
+    background-image: url("media/miscImages/instructionImage.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 
-/*_________________________________End of Game____________________________________*/
+.instructions > p, .instructions> h1{
+    padding: 0 5%;
+    line-height: 21px;
+}
 
+.instructions > button{
+    width: 35%;
+    border-radius: 20%;
+    padding: 2.5%;
+    font-family: inherit;
+}
 
 .end-game-info-container{
-    height: 100%;
-    text-align: center;
+    background-color: darkgray;
+    background-image: url('media/miscImages/endModalBackground.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
-.end-game-logo{
-    height: 50%;
+.end-game-info-container > img{
+    height: 40%;
+    margin-top: 5%
 }
 
 .result-of-game-text{
-    font-size: 30px;
-    margin-bottom: 15px;
+    margin-top: 15%;
+    padding: 5%;
 }
 
-.end-game-button{
-    font-size: 30px;
-    padding: 8px;
+.end-game-info-container > button{
+    margin-top: 5%;
+    padding: 2%;
+    border-radius: 20%;
+    font-family: inherit;
+}
+
+
+/* ___________________________________________________Right Panel_________________________________________________________ */
+.rightVillainContainer{
+    height: 100%;
+    width: 20%;
     position: relative;
+    overflow: hidden;
+    opacity: .6;
+    display: flex;
+    justify-content: center;
+    
 }
 
-.reset, .end-game-button{
-    border-color: #e7e7e7;
-    color: black;
-    border-radius: 5px;
-}
-
-.reset:hover, .end-game-button:hover {
-    background: #e7e7e7;
+.rightVillainContainer > img{
+    height: 100%;
 }
 
 
+/* ___________________________________________________Footer_________________________________________________________ */
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15%;
+    width: 100%;
+    background-color: darkgray;
+}
+
+.health-container{
+    position: relative;
+    height: 10%;
+    width: 80%;
+}
+
+.full-bar{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    border-radius: 15%;
+}
+
+.life-left{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #74070B;
+    border-radius: 15%;
+}
+
+.life-bar-icon{
+    height: 800%;
+    position: absolute;
+    transform: translate(60%, -45%);
+    right: 0;
+}
+
+
+
+/* ___________________________________________________General_________________________________________________________ */
+
+.video-background-container{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
+}
+
+.video-background{
+    height: 300%;
+    opacity: .6;
+}
 
 .hide{
     display: none;
 }
 
-
+.disableClick{
+    pointer-events: none;
+}

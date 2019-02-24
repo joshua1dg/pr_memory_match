@@ -10,8 +10,6 @@ class GameLogic{
 
 
     cardShow(selectedCardEvent){
-        console.log('full event: ', selectedCardEvent);
-        console.log('front of card event: ', selectedCardEvent.currentTarget.parentElement);
         if(event.target.className === 'cardBack'){
             $(selectedCardEvent.target).addClass('hide');
             if (this.firstCardEventInSequence === null){
@@ -49,7 +47,6 @@ class GameLogic{
     }
 
     lifeBarIconMover(currentHealth){
-        console.log('current health: ', currentHealth);
         $('.life-left').css('width', currentHealth+'%');
     }
 

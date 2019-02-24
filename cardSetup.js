@@ -34,7 +34,6 @@ class Card{
     renderCardsNewGame(){
         this.cardDuplicator();
         this.cardShuffler();
-        console.log(this.availableCardNamesArray);
         this.loadCardsOnDom();
     }
 
