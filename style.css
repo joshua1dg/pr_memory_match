@@ -2,7 +2,7 @@ body{
     width: 100vw;
     height: 100vh;
     margin: 0;
-    background-image: url('/media/miscImages/boardBackground.jpg');
+    background-image: url('media/miscImages/boardBackground.jpg');
     background-size: cover;
     user-select: none;
     font-family: 'Orbitron', sans-serif;
