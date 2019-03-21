@@ -3,92 +3,83 @@
 
 <head>
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script src="cardSetup.js"></script>
+    <script src="gameLogic.js"></script>
+    <script src="mediaHandler.js"></script>
     <script src="main.js"></script>
 </head>
 
 <body>
 
     <div class="start-screen">
+        <div class="video-start-page-container">
+            <video autoplay muted loop id="startPageVideo">
+                <source src="media/video/startPageVideo.mp4" type="video/mp4">
+            </video>
+        </div>
         <div class="start-background"></div>
         <button class="start-button">Start</button>
     </div>
 
-    <div class="picOverVideo hide"></div>
-
-    <div class="videoOverlay hide">
+    <div class="video-background-container">
         <video autoplay muted loop id="videoBackground" class="video-background">
             <source src="media/video/videoBackground.mp4" type="video/mp4">
-        </video>
+        </video>   
     </div>
+    
 
-    <div class="header-container hide">
-        <img src="media/logo.png" alt="Power Rangers Logo">
-        <div class="about-game"><a href="#">About The Game</a></div>
-
-        <!--<div class="games-played">-->
-            <!--<div class="label">Games Played</div>-->
-            <!--<div class="value"></div>-->
-        <!--</div>-->
-
-        <div class="reset-game-button-container">
-            <button class="reset">Reset Game</button>
+    <div class="header">
+        <img class='headerLogo' src="./media/miscImages/logo.png" alt="">
+        <div class="stat-container">
+            <p class='attempts'>Attempts: 0</p>
+            <p class='accuracy'>Accuracy: 100%</p>
         </div>
+        <button class='headerResetButton'>Reset Game</button>
     </div>
-
-    <div class="left-column-container hide">
-        <div class="left-serpentera-wrapper"></div>
-    </div>
-
-
-    <div class="game-area hide">
-
-        <div class="instructions hide">
-            <div class="instructionHeaderContainer"><h1>Help the Rangers Defeat Lord Zedd!</h1></div>
-            <div class="instructionTextContainer"><p>The Power Rangers Need Your Help! Lord Zedd has returned and plans to destroy the planet!
-            Help the Power Rangers by matching each trading card, make more than 10 wrong moves and it's game over!
-            Do you have what it takes to save the planet?
-            </p></div>
-            <div class="instructionButtonContainer"><button id="instructionButton">I'm Ready!</button></div>
+    <div class="mid-sections-container">
+        <div class="leftVillainContainer">
+            <img class='serpentera' src="./media/miscImages/serpentera.png" alt="">
         </div>
+        <div class="game-container">
 
-        <div class="end-game-info-container hide">
-            <img class='end-game-logo' src="media/youWinImage.png" alt="">
-            <div class="result-of-game-text">GAME OVER</div>
-            <button class="end-game-button">Reset Game!</button>
-        </div>
-
-        <div class="videoCutSceneContainer">
-            <video class='video-cut-scene hide' id="intro-vid" src="media/video/lordZeddIntroVid.mov"></video>
-            <video class='video-cut-scene hide' id="youLoseVideo" src="media/video/youLose.mov"></video>
-            <video class='video-cut-scene hide' id="youWinVideo" src="media/video/youWin.mov"></video>
-
-        </div>
-
-        <div class="cardsContainer hide"></div>
-        <div class="stats-container hide">
-            <div class="attempts">
-                <div class="label">Attempts</div>
-                <div class="value"></div>
+            <div class="instructions">
+                <h2>Help the Rangers Defeat Lord Zedd!</h1>
+                <p>The Power Rangers Need Your Help! Lord Zedd has returned and plans to destroy the planet!
+                    Help the Power Rangers by matching each trading card, make more than 10 wrong moves and it's game over!
+                    Do you have what it takes to save the planet?
+                </p>
+                <button id="instructionButton">I'm Ready!</button>
             </div>
 
-            <div class="current-health">
-                <div class="label">Health</div>
-                <div class="value"></div>
+            <div class="end-game-info-container hide">
+                <img class='end-game-logo' src="media/miscImages/youLoseImage.png" alt="">
+                <h2 class="result-of-game-text">You Lose! Try Again?</h2>
+                <button class="end-game-button">Reset Game!</button>
             </div>
 
-            <div class="accuracy">
-                <div class="label">Accuracy</div>
-                <div class="value"></div>
+
+            <img class='zeddBoardBackground' src="./media/miscImages/lordZeddBackground.png" alt="">
+            <div class="card-container">
+
             </div>
-            <!--<div class="health-icon"><img src="media/lifeBarIcon.png"" alt=""></div>-->
-            <!--<progress class="health-bar hide" value="80"></progress>-->
+        </div>
+
+        <div class="rightVillainContainer">
+            <img class='lordZedd' src="./media/miscImages/lordZedd.png" alt="">
         </div>
     </div>
 
-    <div class="villan-container hide"></div>
-
-
+    <div class="footer">
+        <div class="health-container">
+            <div class="life-left">
+                <img class='life-bar-icon' src="./media/miscImages/lifeBarIcon.png" alt="">
+            </div>
+            <div class="full-bar"></div>
+        </div>
+    </div>
 
 </body>
 </html>
