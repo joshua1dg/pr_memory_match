@@ -95,15 +95,18 @@ body{
 
 /* ___________________________________________________Left Panel_________________________________________________________ */
 .leftVillainContainer{
-    height: 100%;;
+    height: 100%;
     width: 20%;
     position: relative;
     opacity: .6;
+    display: flex;
+    align-content: baseline;
+    justify-content: left;
+    overflow: hidden
 }
 
 .leftVillainContainer > img{
     height: 100%;
-    width: 100%
 }
 
 
@@ -301,14 +304,58 @@ body{
 
 
 
-/* Responsiveness */
+/* Responsiveness
 @media only screen and (max-width: 1042px){
     .instructions{
         width: 60%;
     }
 }
 
-@media only screen and (max-width: 820px){
+
+@media only screen and (max-width: 550px){
+    .headerLogo{
+        height: 75%;
+        margin-right: 0;
+    }
+}
+
+@media only screen and (max-height: 645px){
+    .singleCardDiv{
+        width: 9%;
+        margin: 3%;
+    }
+} */
+
+
+
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) { 
+    .instructions{
+        width: 50%;
+    }
+}
+
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px) { 
+    .instructions{
+        width: 60%;
+    }
+
+    .header, .footer{
+        height: 12.5%;
+    }
+
+    .mid-sections-container{
+        height: 75%;
+    }
+}
+
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+
     .game-container{
         width: 100%;
     }
@@ -318,13 +365,71 @@ body{
     }
 
     .headerLogo{
-        margin-right: 3%;
-    }
-}
-
-@media only screen and (max-width: 550px){
-    .headerLogo{
         height: 75%;
         margin-right: 0;
     }
-}
+
+    .instructions{
+        width: 50%;
+    }
+ }
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) { 
+
+    .headerLogo{
+        display: none;
+    }
+
+    .header{
+        justify-content: space-around;
+        height: 10%;
+    }
+
+    .stat-container{
+        width: initial;
+    }
+
+    .stat-container > p{
+        margin: 0 10px;
+    }
+
+    .instructions{
+        width: 70%;
+    }
+
+    .card-container{
+        overflow: scroll;
+    }
+
+    .singleCardDiv{
+        width: 13%;
+        margin: 1% 7%;
+    }
+
+    .mid-sections-container{
+        height: 80%;
+    }
+
+    .footer{
+        height: 10%;
+    }
+
+    .health-container{
+        height: 20%;
+    }
+
+    .life-bar-icon{
+        height: 450%;
+        transform: translate(60%, -40%)
+    }
+
+
+
+
+ }
+
+
+
+
