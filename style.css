@@ -330,7 +330,7 @@ body{
 
 
 /* Extra large devices (large desktops, 1200px and up) */
-@media (max-width: 1200px) { 
+@media (max-width: 1200px) and (min-height: 650px) { 
     .instructions{
         width: 50%;
     }
@@ -399,15 +399,14 @@ body{
         width: 70%;
     }
 
-    .card-container{
+    /* .card-container{
         overflow: scroll;
-    }
+    } */
 
-    .singleCardDiv{
-        width: 13%;
-        margin: 1% 7%;
+    .singleCardDiv {
+        width: 7%;
+        margin: 1% 10%;
     }
-
     .mid-sections-container{
         height: 80%;
     }
@@ -427,8 +426,41 @@ body{
 
 
 
-
  }
+
+ @media (min-aspect-ratio: 2/1) {
+    .singleCardDiv {
+        width: 9%;
+    }
+}
+
+@media (min-aspect-ratio: 25/10) {
+    .singleCardDiv {
+        width: 7%;
+    }
+}
+
+
+
+@media (max-aspect-ratio: 13/10) and (max-height: 500px) {
+    .singleCardDiv {
+        width: 9%;
+    }
+}
+
+
+@media (max-aspect-ratio: 155/100) and (max-height: 500px) and (min-height: 485px) {
+    .singleCardDiv {
+        width: 7%;
+    }
+}
+
+/* @media (max-aspect-ratio: 18/10) {
+    .singleCardDiv {
+        width: 7%;
+    }
+} */
+
 
 
 
