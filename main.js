@@ -49,7 +49,7 @@ class initializer{
     handleStartPage(){
         const music = this.media.playAudio('startPageMusic', 1, true);
 
-        $('.start-button').on('click', () => {
+        $('.start-button').on('click tapend', () => {
             $('.start-screen').remove();
             music.pause();
             this.handleGameStart();
