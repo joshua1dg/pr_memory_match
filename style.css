@@ -245,6 +245,7 @@ body{
     height: 15%;
     width: 100%;
     background-color: darkgray;
+    overflow: hidden;
 }
 
 .health-container{
@@ -428,9 +429,30 @@ body{
 
  }
 
+/* @media (min-width: 376px) and (min-height: 443px) {
+    .singleCardDiv {
+        width: 5%;
+        margin: 0% 5%;
+    }
+} */
+
+ /* @media (max-width: 770px) and (min-height: 365px){ 
+    .singleCardDiv {
+        width: 7%;
+    }
+ } */
+
+ /* 770 365 */
+
  @media (min-aspect-ratio: 2/1) {
     .singleCardDiv {
         width: 9%;
+    }
+}
+
+@media (min-aspect-ratio: 2/1) and (max-width:730px) and (max-height: 365px){
+    .singleCardDiv {
+        width: 7%;
     }
 }
 
@@ -439,15 +461,6 @@ body{
         width: 7%;
     }
 }
-
-
-
-@media (max-aspect-ratio: 13/10) and (max-height: 500px) {
-    .singleCardDiv {
-        width: 9%;
-    }
-}
-
 
 @media (max-aspect-ratio: 155/100) and (max-height: 500px) and (min-height: 485px) {
     .singleCardDiv {
