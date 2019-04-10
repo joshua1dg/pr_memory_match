@@ -450,6 +450,9 @@ body{
     .singleCardDiv {
         width: 9%;
     }
+    .instructions{
+        width: 93%;
+    }
 }
 
 @media (min-aspect-ratio: 2/1) and (max-width:730px) and (max-height: 365px){
@@ -461,6 +464,22 @@ body{
 @media (min-aspect-ratio: 25/10) {
     .singleCardDiv {
         width: 7%;
+    }
+    .instructions{
+        width: 100%;
+    }
+
+    .instruction> h2{
+        font-size: .5em;
+    }
+
+    .instructions>p{
+        font-size: .75em;
+    }
+
+    .instructions > button {
+        padding: .5%;
+        font-size: .75em;
     }
 }
 
