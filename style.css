@@ -67,12 +67,16 @@ body{
 
 .stat-container{
     color: white;
-    width: 32%;
+    width: 35%;
 }
 
-.attempts{
+.attempts {
     display: inline-block;
-    width: 50%;
+    width: 30%;
+}
+
+.accuracy{
+    display: inline;
 }
 
 .headerLogo{
@@ -311,36 +315,21 @@ body{
 
 
 
-
-/* Responsiveness
-@media only screen and (max-width: 1042px){
-    .instructions{
-        width: 60%;
-    }
-}
-
-
-@media only screen and (max-width: 550px){
-    .headerLogo{
-        height: 75%;
-        margin-right: 0;
-    }
-}
-
-@media only screen and (max-height: 645px){
-    .singleCardDiv{
-        width: 9%;
-        margin: 3%;
-    }
-} */
-
-
-
-
 /* Extra large devices (large desktops, 1200px and up) */
 @media (max-width: 1200px) and (min-height: 650px) { 
     .instructions{
         width: 50%;
+    }
+}
+
+@media (max-width: 1140px){
+    .attempts {
+        font-size: .75em;
+        width: 40%;
+    }
+
+    .accuracy{
+        font-size: .75em;
     }
 }
 
@@ -353,6 +342,10 @@ body{
 
     .header, .footer{
         height: 12.5%;
+    }
+
+    .headerLogo{
+        height: 80%;
     }
 
     .mid-sections-container{
@@ -382,6 +375,20 @@ body{
     }
  }
 
+ @media (max-width: 685px){
+     .headerLogo{
+         display: none;
+     }
+
+     .stat-container {
+        width: 65%;
+    }
+
+    .attempts {
+        width: 40%;
+    }
+ }
+
 
 /* Small devices (landscape phones, 576px and up) */
 @media (max-width: 576px) and (min-height: 530px) { 
@@ -395,24 +402,20 @@ body{
         height: 10%;
     }
 
-    .stat-container{
-        width: initial;
-    }
-
-    .stat-container > p{
-        margin: 0 10px;
-    }
-
     .instructions{
         width: 70%;
     }
 
-    /* .card-container{
-        overflow: scroll;
-    } */
+    .instructions > h2{
+        font-size: 1em;
+    }
+
+    .instructions > p{
+        font-size: .75em;
+    }
 
     .singleCardDiv {
-        width: 7%;
+        width: 13%;
         margin: 1% 10%;
     }
     .mid-sections-container{
@@ -445,23 +448,47 @@ body{
     .stats-container > p{
         display: inline;
     }
-}
 
- /* @media (max-width: 770px) and (min-height: 365px){ 
-    .singleCardDiv {
-        width: 7%;
+    .instructions {
+        width: 95%;
     }
- } */
 
- /* 770 365 */
+    .instructions > h2{
+        font-size: 1.25em;
+    }
+
+    .instructions > p{
+        font-size: .75em;
+    }
+
+    .instructions > button{
+        padding: .4%;
+    }
+
+}
 
  @media (min-aspect-ratio: 2/1) {
     .singleCardDiv {
         width: 9%;
     }
     .instructions{
-        width: 93%;
+        width: 100%;
     }
+
+    .instructions > button{
+        padding: .4%;
+    }
+
+    /* .attempts {
+        display: inline-block;
+        width: 40%;
+        font-size: .5em;
+    }
+
+    .accuracy{
+        font-size: .5em;
+        display: inline;
+    } */
 }
 
 @media (min-aspect-ratio: 2/1) and (max-width:730px) and (max-height: 365px){
@@ -490,6 +517,7 @@ body{
         padding: .5%;
         font-size: .75em;
     }
+
 }
 
 @media (max-aspect-ratio: 155/100) and (max-height: 500px) and (min-height: 485px) {
@@ -498,11 +526,37 @@ body{
     }
 }
 
-/* @media (max-aspect-ratio: 18/10) {
-    .singleCardDiv {
-        width: 7%;
+@media (min-height: 1000px) and (max-height: 1375px) and (min-width: 750px) and (max-width: 1050px) and (orientation: portrait) {
+    .headerLogo, .leftVillainContainer, .rightVillainContainer{
+        display: none;
     }
-} */
+
+    .game-container{
+        width: 100%;
+    }
+
+    .stat-container{
+        width: 80%;
+    }
+
+    .stat-container > p{
+        font-size: 1.5em;
+    }
+
+    .instructions {
+        width: 70%;
+    }
+
+    .instructions > h2 {
+        font-size: 3em;
+    }
+
+    .instructions > p {
+        font-size: 1.5em;
+        line-height: 1.5;
+    }
+
+}
 
 
 
