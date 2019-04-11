@@ -11,11 +11,14 @@ class initializer{
         this.gameLogic = new GameLogic();
         this.media = new Media();
 
-        this.clickHandlers();
-        this.handleStartPage();
+        
 
         this.backgroundMusic = null;
 
+        this.handleReset = this.handleReset.bind(this);
+
+        this.clickHandlers();
+        this.handleStartPage();
     };
 
 
@@ -109,7 +112,8 @@ class initializer{
         })
     }
 
-    handleReset = () => {
+    handleReset(){
+        console.log('this is this: ', this);
         if(this.backgroundMusic !== null){
             this.backgroundMusic.pause()
             this.backgroundMusic.currentTime = 0;
