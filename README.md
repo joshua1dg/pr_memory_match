@@ -1,4 +1,4 @@
-A mighty morphin power rangers memory match game creates using Vanilla JavaScript, JQuery, CSS, and HTML.
+A mighty morphin power rangers memory match game created using Vanilla JavaScript, JQuery, CSS, and HTML.
 
 Live Demo: http://www.joshgarcia.me/memory_match/
 
