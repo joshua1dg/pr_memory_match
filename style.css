@@ -314,6 +314,7 @@ body{
 
 
 
+/* ___________________________________________________Responsiveness_________________________________________________________ */
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (max-width: 1200px) and (min-height: 650px) { 
@@ -479,16 +480,6 @@ body{
         padding: .4%;
     }
 
-    /* .attempts {
-        display: inline-block;
-        width: 40%;
-        font-size: .5em;
-    }
-
-    .accuracy{
-        font-size: .5em;
-        display: inline;
-    } */
 }
 
 @media (min-aspect-ratio: 2/1) and (max-width:730px) and (max-height: 365px){
